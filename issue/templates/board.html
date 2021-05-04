@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+{% block content %}
+
+
+<div class="jumbotron">
+    <h1 class="display-4">Crime Report made easy</h1>
+    <p class="lead">Description goes here</p>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="{% url 'report' %}" role="button">+ Report Crime</a>
+    </p>
+</div>
+
+<form action="{% url 'search_results' %}" method="get">
+  <input name="q" type="text" placeholder="Search...">
+</form>
+
+
+{% endblock content %}
+
+
+

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+{% block content %}
+
+
+<!-- Main Section -->
+<div class="container">
+  <h3 class="heading font-weight-light">Search results for "{{search_term}}"</h3>
+  <hr />
+</div>
+
+<div class="container main-part">
+  <!-- Card for search results -->
+ <h1>Search Results</h1>
+
+<ul>
+  {% for crime in object_list %}
+    <li>
+      {{ crime.crime_title }}
+    </li>
+
+  {% endfor %}
+</ul>
+ <!-- Card for search results end-->
+</div>
+
+
+{% endblock content %}
+
+
+
